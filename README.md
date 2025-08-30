@@ -55,4 +55,34 @@ Original vs Compressed (first page):
 
 ![Preview Example](example_preview.png)
 
+Preview Example
+
+Original vs Compressed (first page):
+
+
+---
+
+### 📌 Example `compress_pdfs.ipynb`
+
+Structure:
+
+- **Setup cell**
+  ```python
+  !apt-get install -y ghostscript poppler-utils
+  !pip install PyPDF2 tqdm pdf2image
+  ```
+
+- **Import + Functions**
+(copy the compress_pdf_with_progressbar, preview_pdf_quality, and compress_pdfs_in_folder code here)
+
+- **Single file compression demo** 
+ ```python
+compress_pdf_with_progressbar("input.pdf", "output.pdf", dpi=150)
+preview_pdf_quality("input.pdf", "output.pdf", page_num=0)
+```
+
+- **Batch compression demo**
+ ```python
+compress_pdfs_in_folder("my_pdfs", "compressed", dpi=150)
+```
 ---
